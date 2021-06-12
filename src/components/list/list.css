@@ -1,0 +1,74 @@
+.music {
+  width: 800px;
+}
+
+.music .list {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px;
+}
+
+.music .playlist-wrap {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 16px 8px;
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+.music .playlist-wrap .platlist {
+  background-color: #fff;
+  border: 2px solid #b8b8b8;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+}
+
+.music .playlist-wrap .platlist .cover {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.music .playlist-wrap .platlist .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 8px;
+}
+
+.music .playlist-wrap .platlist .info .title {
+  font-size: 15px;
+}
+
+.music .playlist-wrap .platlist .info .category {
+  font-size: 13px;
+}
+
+.music .playlist-wrap .platlist .info .category .filter {
+  margin-right: 4px;
+}
+
+.music .playlist-wrap .platlist .info .songs {
+  font-size: 11px;
+}
+
+.music .playlist-wrap .platlist .info .count {
+  margin-left: 4px;
+}
+/*# sourceMappingURL=list.css.map */

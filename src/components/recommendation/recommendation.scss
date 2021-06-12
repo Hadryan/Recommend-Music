@@ -1,0 +1,120 @@
+// size
+$base-space: 16px;
+$base-border: 5px;
+
+// font-size
+$font-large: 18px;
+$font-medium: 15px;
+$font-small: 13px;
+$font-xsmall: 11px;
+
+// font-weight
+$font-bold: 600;
+
+.recommendation-warp {
+  width: 800px;
+  margin: $base-space * 3;
+
+  .title {
+    display: block;
+    width: 100%;
+    padding: $base-space/2 $base-space;
+    font-size: $font-large;
+    font-weight: $font-bold;
+  }
+
+  .carousel-wrap {
+    width: 100%;
+    position: relative;
+
+    .btn {
+      border: 0;
+      outline: none;
+      background-color: transparent;
+      font-size: 30px;
+      position: absolute;
+      top: 43%;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+
+      &.left {
+        left: -$base-space * 2;
+      }
+
+      &.right {
+        right: -$base-space * 2;
+      }
+
+      &:hover {
+        opacity: 50%;
+      }
+    }
+
+    .recommendations {
+      width: 100%;
+      height: 250px;
+      overflow-x: hidden;
+      background-color: #3a405a;
+      color: #fff;
+      border-radius: $base-border;
+      display: flex;
+      align-items: center;
+
+      .recommendation {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: $base-space;
+
+        .weather {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 30%;
+
+          .icon {
+            font-size: 90px;
+          }
+
+          .info {
+            margin-top: $base-space;
+          }
+        }
+
+        .playlist {
+          width: 70%;
+          height: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+
+          .music {
+            display: grid;
+            grid-template-columns: 50px auto;
+            align-items: center;
+
+            .album-cover {
+              height: 45px;
+              width: 45px;
+              border-radius: $base-border;
+            }
+
+            .song-info {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-size: $font-small;
+              padding: $base-space/2;
+
+              .artist {
+                font-size: $font-xsmall;
+                opacity: 80%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

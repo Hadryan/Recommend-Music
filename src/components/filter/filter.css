@@ -1,0 +1,39 @@
+.category .title {
+  padding: 32px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.category .filter-wrap {
+  width: 800px;
+  height: 140px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  place-items: center;
+  margin: 16px;
+}
+
+.category .filter-wrap .filter {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #4f6272;
+  background-color: #ced3d8;
+  color: #333;
+  font-weight: 600;
+  padding: 1em;
+  border-radius: 1em;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.category .filter-wrap .filter:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=filter.css.map */

@@ -25,4 +25,29 @@ nav .logo {
 nav .logo:hover {
   opacity: 0.7;
 }
+
+nav .loginAndJoin {
+  font-size: 15px;
+}
+
+nav .loginAndJoin .login {
+  margin-right: 16px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+nav .loginAndJoin .login:hover {
+  opacity: 0.7;
+}
+
+nav .loginAndJoin .join {
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+nav .loginAndJoin .join:hover {
+  opacity: 0.7;
+}
 /*# sourceMappingURL=navbar.css.map */
