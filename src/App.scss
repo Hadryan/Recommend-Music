@@ -1,0 +1,256 @@
+$base-space: 16px;
+$base-border: 5px;
+$font-large: 18px;
+$font-medium: 15px;
+$font-small: 13px;
+$font-xsmall: 11px;
+$font-bold: 600;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  nav {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $base-space;
+    background-color: #f8f8f8;
+
+    .logo {
+      font-weight: $font-bold;
+      font-size: $font-large;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .loginAndJoin {
+      font-size: $font-medium;
+
+      .login {
+        margin-right: $base-space;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .join {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .recommendation-warp {
+    width: 800px;
+    margin: $base-space * 3;
+
+    .title {
+      display: block;
+      width: 100%;
+      padding: $base-space/2 $base-space;
+      font-size: $font-large;
+      font-weight: $font-bold;
+    }
+
+    .carousel-wrap {
+      width: 100%;
+      position: relative;
+
+      .btn {
+        border: 0;
+        outline: none;
+        background-color: transparent;
+        font-size: 30px;
+        position: absolute;
+        top: 43%;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+
+        &.left {
+          left: -$base-space * 2;
+        }
+
+        &.right {
+          right: -$base-space * 2;
+        }
+
+        &:hover {
+          opacity: 50%;
+        }
+      }
+
+      .recommendations {
+        width: 100%;
+        height: 250px;
+        overflow-x: hidden;
+        background-color: #3a405a;
+        color: #fff;
+        border-radius: $base-border;
+        display: flex;
+        align-items: center;
+
+        .recommendation {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: $base-space;
+
+          .weather {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+
+            .icon {
+              font-size: 90px;
+            }
+
+            .info {
+              margin-top: $base-space;
+            }
+          }
+
+          .playlist {
+            width: 70%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+            .music {
+              display: grid;
+              grid-template-columns: 50px auto;
+              align-items: center;
+
+              .album-cover {
+                height: 45px;
+                width: 45px;
+                border-radius: $base-border;
+              }
+
+              .song-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: $font-small;
+                padding: $base-space/2;
+
+                .artist {
+                  font-size: $font-xsmall;
+                  opacity: 80%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .category {
+    .title {
+      padding: $base-space * 2;
+      font-size: $font-large;
+      font-weight: $font-bold;
+    }
+    .filter-wrap {
+      width: 800px;
+      height: 140px;
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: 1fr 1fr;
+      place-items: center;
+      margin: $base-space;
+
+      .filter {
+        cursor: pointer;
+        outline: none;
+        border: 1px solid #4f6272;
+        background-color: #ced3d8;
+        color: #333;
+        font-weight: $font-bold;
+        padding: 1em;
+        border-radius: 1em;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .music {
+    width: 800px;
+
+    .list {
+      font-size: $font-large;
+      font-weight: $font-bold;
+      padding: $base-space;
+    }
+
+    .playlist-wrap {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: auto;
+      gap: $base-space $base-space/2;
+      margin-top: $base-space;
+      margin-bottom: $base-space * 3;
+
+      .platlist {
+        background-color: #fff;
+        border: 2px solid rgb(184, 184, 184);
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+
+        .cover {
+          width: 100%;
+          object-fit: cover;
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding: $base-space $base-space/2;
+
+          .title {
+            font-size: $font-medium;
+          }
+
+          .category {
+            font-size: $font-small;
+          }
+          .songs {
+            font-size: $font-xsmall;
+          }
+        }
+      }
+    }
+  }
+}
