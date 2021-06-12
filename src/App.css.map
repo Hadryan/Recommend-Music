@@ -1,9 +1,9 @@
 {
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "App.scss"
-    ],
-    "names": [],
-    "file": "App.css"
+  "version": 3,
+  "mappings": "",
+  "sources": [
+    "app.scss"
+  ],
+  "names": [],
+  "file": "app.css"
 }
