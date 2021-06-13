@@ -79,6 +79,20 @@ $font-bold: 600;
 
           .info {
             margin-top: $base-space;
+            text-align: center;
+
+            .tempAndLoc {
+              font-size: $font-small;
+              margin-bottom: 4px;
+
+              .temperature {
+                margin-right: 4px;
+              }
+
+              .state {
+                font-size: $font-medium;
+              }
+            }
           }
         }
 

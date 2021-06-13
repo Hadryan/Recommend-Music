@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./recommendation.scss";
+import Weather from "./weather";
 
 class Recommendation extends Component {
   render() {
@@ -15,13 +16,7 @@ class Recommendation extends Component {
           </button>
           <div className="recommendations">
             <div className="recommendation">
-              <div className="weather">
-                <i className="fas fa-cloud-rain icon"></i>
-                <div className="info">
-                  <span className="temperature">26°C</span>
-                  <span className="state">흐리고 비</span>
-                </div>
-              </div>
+              <Weather />
               <div className="playlist">
                 <div className="music">
                   <img
