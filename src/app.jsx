@@ -1,4 +1,4 @@
-import "./app.scss";
+import "./App.scss";
 import Filter from "./components/filter/filter";
 import List from "./components/list/list";
 import Navbar from "./components/navbar/navbar";

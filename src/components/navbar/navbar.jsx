@@ -7,8 +7,8 @@ class Navbar extends Component {
       <nav>
         <span className="logo">날씨음악</span>
         <div className="loginAndJoin">
-          <span className="login">로그인</span>
-          <span className="join">회원가입</span>
+          <a href="login.html" className="login">로그인</a>
+          <a href="join.html" className="join">회원가입</a>
         </div>
       </nav>
     );
