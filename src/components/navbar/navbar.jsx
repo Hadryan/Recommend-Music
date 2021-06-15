@@ -5,10 +5,16 @@ class Navbar extends Component {
   render() {
     return (
       <nav>
-        <span className="logo">날씨음악</span>
+        <a href="/" className="logo">
+          날씨음악
+        </a>
         <div className="loginAndJoin">
-          <a href="login.html" className="login">로그인</a>
-          <a href="join.html" className="join">회원가입</a>
+          <a href="login" className="login">
+            로그인
+          </a>
+          <a href="signup" className="signup">
+            회원가입
+          </a>
         </div>
       </nav>
     );

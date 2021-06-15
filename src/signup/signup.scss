@@ -17,6 +17,13 @@ code {
     box-sizing: border-box;
 }
 
+#root {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .loginForm {
     position: absolute;
     width: 300px;
@@ -41,7 +48,12 @@ code {
     padding: 10px 10px;
 }
 
-.passForm {
+.passForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 10px 10px;
+}
+.passForm_chck {
     border-bottom: 2px solid #adadad;
     margin: 30px;
     padding: 10px 10px;
@@ -58,6 +70,15 @@ code {
 }
 
 .pw {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #636e72;
+    font-size: 16px;
+    height: 25px;
+    background: none;
+}
+.pw_chck {
     width: 100%;
     border: none;
     outline: none;

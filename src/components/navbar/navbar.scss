@@ -11,6 +11,13 @@ $font-xsmall: 11px;
 // font-weight
 $font-bold: 600;
 
+a{
+  text-decoration: none;
+  color: #000;
+  :active{
+    text-decoration: none;
+  }
+}
 nav {
   width: 100vw;
   height: 50px;
