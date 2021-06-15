@@ -13,6 +13,7 @@ $font-bold: 600;
 
 .recommendation-warp {
   width: 800px;
+  height: 300px;
   margin: $base-space * 3;
 
   .title {
@@ -23,108 +24,80 @@ $font-bold: 600;
     font-weight: $font-bold;
   }
 
-  .carousel-wrap {
-    width: 100%;
-    position: relative;
+  .recommendation {
+    width: 800px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $base-space;
+    background-color: #3a405a;
+    color: #fff;
+    border-radius: $base-border;
 
-    .btn {
-      border: 0;
-      outline: none;
-      background-color: transparent;
-      font-size: 30px;
-      position: absolute;
-      top: 43%;
-      transition: opacity 0.3s ease;
-      cursor: pointer;
+    .weather {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: 100%;
+      position: relative;
 
-      &.left {
-        left: -$base-space * 2;
+      .icon {
+        width: 150px;
+        position: absolute;
+        top: 10px;
       }
 
-      &.right {
-        right: -$base-space * 2;
-      }
+      .info {
+        text-align: center;
+        position: absolute;
+        top: 150px;
 
-      &:hover {
-        opacity: 50%;
+        .tempAndLoc {
+          font-size: $font-small;
+          margin-bottom: 4px;
+
+          .temperature {
+            margin-right: 4px;
+          }
+
+          .state {
+            font-size: $font-medium;
+          }
+        }
       }
     }
 
-    .recommendations {
-      width: 100%;
-      height: 250px;
-      overflow-x: hidden;
-      background-color: #3a405a;
-      color: #fff;
-      border-radius: $base-border;
-      display: flex;
-      align-items: center;
+    .playlist {
+      width: 70%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
 
-      .recommendation {
-        width: 100%;
-        height: 100%;
-        display: flex;
+      .music {
+        display: grid;
+        grid-template-columns: 50px auto;
         align-items: center;
-        padding: $base-space;
 
-        .weather {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 30%;
-
-          .icon {
-            width: 110px;
-          }
-
-          .info {
-            text-align: center;
-
-            .tempAndLoc {
-              font-size: $font-small;
-              margin-bottom: 4px;
-
-              .temperature {
-                margin-right: 4px;
-              }
-
-              .state {
-                font-size: $font-medium;
-              }
-            }
-          }
+        .album-cover {
+          height: 45px;
+          width: 45px;
+          border-radius: $base-border;
         }
 
-        .playlist {
-          width: 70%;
-          height: 100%;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr 1fr 1fr;
+        .song-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: $font-small;
+          padding: $base-space/2;
 
-          .music {
-            display: grid;
-            grid-template-columns: 50px auto;
-            align-items: center;
-
-            .album-cover {
-              height: 45px;
-              width: 45px;
-              border-radius: $base-border;
-            }
-
-            .song-info {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              font-size: $font-small;
-              padding: $base-space/2;
-
-              .artist {
-                font-size: $font-xsmall;
-                opacity: 80%;
-              }
-            }
+          .artist {
+            font-size: $font-xsmall;
+            opacity: 80%;
           }
         }
       }

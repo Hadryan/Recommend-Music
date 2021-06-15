@@ -1,5 +1,6 @@
 .recommendation-warp {
   width: 800px;
+  height: 300px;
   margin: 48px;
 }
 
@@ -11,63 +12,25 @@
   font-weight: 600;
 }
 
-.recommendation-warp .carousel-wrap {
-  width: 100%;
-  position: relative;
-}
-
-.recommendation-warp .carousel-wrap .btn {
-  border: 0;
-  outline: none;
-  background-color: transparent;
-  font-size: 30px;
-  position: absolute;
-  top: 43%;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-}
-
-.recommendation-warp .carousel-wrap .btn.left {
-  left: -32px;
-}
-
-.recommendation-warp .carousel-wrap .btn.right {
-  right: -32px;
-}
-
-.recommendation-warp .carousel-wrap .btn:hover {
-  opacity: 50%;
-}
-
-.recommendation-warp .carousel-wrap .recommendations {
-  width: 100%;
+.recommendation-warp .recommendation {
+  width: 800px;
   height: 250px;
-  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px;
   background-color: #3a405a;
   color: #fff;
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 16px;
-}
-
-.recommendation-warp .carousel-wrap .recommendations .recommendation .weather {
+.recommendation-warp .recommendation .weather {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,18 +41,40 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 30%;
+  height: 100%;
+  position: relative;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation .weather .icon {
-  font-size: 90px;
+.recommendation-warp .recommendation .weather .icon {
+  width: 150px;
+  position: absolute;
+  top: 10px;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation .weather .info {
-  margin-top: 16px;
+.recommendation-warp .recommendation .weather .info {
+  text-align: center;
+  position: absolute;
+  top: 150px;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation .playlist {
+.recommendation-warp .recommendation .weather .info .tempAndLoc {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.recommendation-warp .recommendation .weather .info .tempAndLoc .temperature {
+  margin-right: 4px;
+}
+
+.recommendation-warp .recommendation .weather .info .tempAndLoc .state {
+  font-size: 15px;
+}
+
+.recommendation-warp .recommendation .playlist {
   width: 70%;
   height: 100%;
   display: -ms-grid;
@@ -100,7 +85,7 @@
       grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation .playlist .music {
+.recommendation-warp .recommendation .playlist .music {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50px auto;
@@ -110,13 +95,13 @@
           align-items: center;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation .playlist .music .album-cover {
+.recommendation-warp .recommendation .playlist .music .album-cover {
   height: 45px;
   width: 45px;
   border-radius: 5px;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation .playlist .music .song-info {
+.recommendation-warp .recommendation .playlist .music .song-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,7 +116,7 @@
   padding: 8px;
 }
 
-.recommendation-warp .carousel-wrap .recommendations .recommendation .playlist .music .song-info .artist {
+.recommendation-warp .recommendation .playlist .music .song-info .artist {
   font-size: 11px;
   opacity: 80%;
 }
