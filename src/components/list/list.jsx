@@ -8,7 +8,13 @@ class List extends Component {
         <span className="list">전체(1,234)</span>
         <div className="playlist-wrap">
           <div className="platlist">
-            <img src="img/summer.jpeg" alt="platlist-cover" className="cover" />
+            <div className="cover-wrap">
+              <img
+                src="img/summer.jpeg"
+                alt="platlist-cover"
+                className="cover"
+              />
+            </div>
             <div className="info">
               <span className="title">선선한 초여름의 낭만을 느끼며</span>
               <div className="category">

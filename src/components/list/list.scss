@@ -35,9 +35,24 @@ $font-bold: 600;
       display: grid;
       grid-template-rows: 2fr 1fr;
 
-      .cover {
+      &:hover > .cover-wrap > .cover {
+        transform: scale(1.1);
+      }
+
+      &:hover > .info {
+        color: gray;
+      }
+
+      .cover-wrap {
         width: 100%;
-        object-fit: cover;
+        height: 227px;
+        overflow: hidden;
+
+        .cover {
+          width: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
       }
 
       .info {
@@ -46,6 +61,7 @@ $font-bold: 600;
         align-items: flex-start;
         justify-content: space-between;
         padding: $base-space $base-space/2;
+        transition: color 0.3s ease;
 
         .title {
           font-size: $font-medium;
